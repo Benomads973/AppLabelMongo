@@ -19,17 +19,10 @@ exports.createProduct = async (req, res) => {
 exports.getProduct = async (req, res) => {
   try {
     const product = await Product.findById(req.params.id);
-    if (!product) return res.status(404).json({ message: 'Product not found' });
+    if (!product) throw new Error('Product not found');
+    else if (product?.org === '' || product?.org === 'Organisation') res.json(getFakeData(product.org));
+    else return res.json(product);
 
-    if (product.org === '') {
-      return res.json(getFakeData(''));
-    } else if (product.org === 'Organisation') {
-      return res.json(getFakeData('Organisation'));
-    } else if (product.org !== '' && product.org !== 'Organisation') {
-      return res.json(product);
-    } else {
-      return res.status(404).json({ message: 'Product not found' });
-    }
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
