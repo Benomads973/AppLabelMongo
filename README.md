@@ -61,21 +61,21 @@ These ports can be configured in your .env file if needed.
 
 To stop and remove the running containers, use the following command:
 
-```bash
 Copy code
+```bash
 docker-compose down
 ```
 
 This will stop all containers and remove networks, but it will keep the built images. If you also want to remove the images and volumes, use:
 
-```bash
 Copy code
+```bash
 docker-compose down --rmi all -v
 ```
 
 ## Directory Structure
 
-```bash
+```yaml
 docker-compose.yml – Defines the services, networks, and volumes for Docker Compose.
 frontend/ – Contains the frontend application (e.g., React, Vue).
 backend/ – Contains the backend API (e.g., Node.js, Python, etc.).
@@ -87,11 +87,12 @@ database/ – Database configurations (e.g., PostgreSQL, MySQL).
 This project is designed as a white-label solution. To customize the application for specific clients:
 
 Modify the environment variables in .env.
+
 Customize the frontend and backend logic as needed for each client.
 
 ## Troubleshooting
 
-```bash
+```yaml
 Container fails to start: Check the logs with docker-compose logs for detailed error messages.
 Port conflicts: Ensure that the ports defined in .env are available and not used by other applications.
 ```
