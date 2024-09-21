@@ -52,8 +52,8 @@ This command will build the necessary images and start all containers as defined
 After the services are up and running, you can access the application through your browser.
 
 ```bash
-Frontend: http://localhost:3000
-Backend API: http://localhost:8000
+Frontend: http://localhost:8887
+Backend API: http://localhost:5000
 These ports can be configured in your .env file if needed.
 ```
 
