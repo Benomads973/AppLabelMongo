@@ -31,8 +31,8 @@ cd AppLabelMongo
 
 Create a .env file in the root directory of the project to configure environment variables such as database credentials, ports, etc. Use .env.example as a reference:
 
-```bash
 Copy code
+```bash
 cp .env.example .env
 ```
 
@@ -40,8 +40,8 @@ cp .env.example .env
 
 Once you have configured the environment variables, you can start the application using Docker Compose:
 
-```bash
 Copy code
+```bash
 docker-compose up --build
 ```
 
