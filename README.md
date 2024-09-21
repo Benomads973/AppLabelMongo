@@ -54,6 +54,7 @@ After the services are up and running, you can access the application through yo
 ```bash
 Frontend: http://localhost:8887
 Backend API: http://localhost:5000
+Mongo express: http://localhost:8082 
 These ports can be configured in your .env file if needed.
 ```
 
